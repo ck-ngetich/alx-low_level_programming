@@ -1,8 +1,7 @@
 #include <stdio>
 #include <unistd.h>
 /**
- * main
- * Descriptin :  but you have to be a genius to understand the simplicity
+ * main - Entry point of the program
  * Return: 1 (Success)
  */
 int main(void)
