@@ -5,10 +5,11 @@
  */
 void print_aphabet(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; c++)
-{
- _putchar(c);
-}
- _putchar('\n');
+char ch;
+
+for (ch = 'a'; ch <= 'z'; ch++)
+
+_putchar(ch);
+
+_putchar('\n');
 }
