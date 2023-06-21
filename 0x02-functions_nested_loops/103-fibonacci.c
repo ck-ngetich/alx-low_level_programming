@@ -6,17 +6,18 @@
  */
 int main(void)
 {
-int i = 0;
-long j, k = 1, sum = i;
+int i;
+long int j = 1, k = 2,  n, sum = 0;
 
-while (k + j < 4000000)
+for (i = 1; i <= 33; i++)
 {
-k += sum;
-if (k % 2 == 0)
-sum += k;
-j = k + j;
-k = j;
-++i;
+if (j < 4000000 && (j % 2) == 0)
+{
+	sum = sum + j;
+}
+n = j + k;
+j = k;
+k = n;
 }
 printf("%ld\n", sum);
 return (0);
