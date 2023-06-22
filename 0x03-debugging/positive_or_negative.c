@@ -5,7 +5,7 @@
  * @i: The number to be returned
  * Return: 1 for positive num, -1 for a negative num and 0 for anything else
  */
-void positive_or_negative(int i);
+void positive_or_negative(int n);
 {
 int n;
 
