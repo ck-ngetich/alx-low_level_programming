@@ -2,7 +2,7 @@
 
 /**
 * main - causes an infinite loop
-* @i: An integer to be tested
+* @x: An integer to be tested
 * @\\o/: This is the figure to print
 * Return: 0
 */
