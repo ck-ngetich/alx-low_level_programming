@@ -5,23 +5,13 @@
  * @i: The number to be returned
  * Return: 1 for positive num, -1 for a negative num and 0 for anything else
  */
-void positive_or_negative(int n);
-{
-int n;
+void positive_or_negative(int i)
 
-if (n > 0)
 {
-_putchar(43);
-return (1);
-}
-else if (n < 0)
-{
-_putchar(45);
-return (-1);
-}
-else
-{
-_putchar(48);
-return (0);
-}
+if (i > 0)
+printf("%d is positive\n", i);
+else if (i < 0)
+	printf("%d is negative\n", i);
+else 
+	printf("%d is zero\n", i);
 }
