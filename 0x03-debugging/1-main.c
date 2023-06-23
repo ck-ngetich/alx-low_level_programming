@@ -6,17 +6,16 @@
 * @\\o/: This is the figure to print
 * Return: 0
 */
-
 int main(void)
 {
-int i;
-printf("Infinite loop incoming :(\n", i);
+int x;
+printf("Infinite loop incoming :(\n");
 
-i = 0;
-/**
- * while (i < 10): No loop required
+x = 0;
+/*
+ * while (x < 10): No loop required
  * {
- * putchar(i);
+ * putchar(x);
  * }: End ofnon-required loop
  */
 printf("Infinite loop voided! \\o/\n");
