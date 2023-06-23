@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
-* main - causes an infinite loop note do not delete
+* main - causes an infinite loop:wq
+*
 * Return: 0
 */
 
