@@ -2,21 +2,21 @@
 
 /**
 * main - causes an infinite loop
-* @x: An integer to be tested
-* @\\o/: This is the figure to print
+* @i: An integer to be tested
 * Return: 0
 */
 int main(void)
 {
-int x;
+int i;
 printf("Infinite loop incoming :(\n");
-
-x = 0;
+i = 0;
 /*
- * while (x < 10): No loop required
+ * commenting out the infinite loop
+ * i = 0;
+ * while (i < 10)
  * {
- * putchar(x);
- * }: End ofnon-required loop
+ * putchar(i);
+ * }
  */
 printf("Infinite loop voided! \\o/\n");
 
