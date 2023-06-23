@@ -1,17 +1,21 @@
-#include "main.h"
+#include <stdlib.h>
+#include <time.h>
+#include<stdio.h>
 /**
- * print_sign - Prints the sign of a number
- * @n: The number to be checked
- * @i: The number to be returned
- * Return: 1 for positive num, -1 for a negative num and 0 for anything else
+ * main - Determine if a number is positive,negative or zero
+ * Return: 0 (Success)
  */
-void positive_or_negative(int i)
+int main(void)
 
 {
-if (i > 0)
-printf("%d is positive\n", i);
-else if (i < 0)
-	printf("%d is negative\n", i);
+int n;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+if (n > 0)
+printf("%d is positive\n", n);
+else if (n == 0)
+printf("%d is zero\n", n);
 else
-	printf("%d is zero\n", i);
+printf("%d is negative\n", n);
+return (0);
 }
