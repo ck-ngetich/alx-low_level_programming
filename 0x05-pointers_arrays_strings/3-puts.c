@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * _puts - Prints a string
@@ -6,9 +7,9 @@
  */
 void _puts(char *str)
 {
-while (*str != '\0')
+for (; *str != '\0'; str++)
 {
-putchar(str);
+putchar(*str);
 }
 putchar('\n');
 }
