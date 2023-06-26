@@ -1,3 +1,6 @@
+#ifdef Main_header_file
+#define Main_header_file
+
 int _putchar(char c);
 void reset_to_98(int *n);
 void swap_int(int *x, int *y);
@@ -10,3 +13,4 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 
+#endif
