@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcat - Concatenate two strings
+ * _strncat - Concatenate two strings
  * using at most n bytes from src
  * @dest: Input value
  * @src: Input valu
@@ -27,4 +27,3 @@ j++;
 dest[i] = '\0';
 return (dest);
 }
-
