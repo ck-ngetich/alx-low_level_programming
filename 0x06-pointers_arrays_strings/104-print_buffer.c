@@ -28,13 +28,13 @@ else
 printf("  ");
 if (i % 2)
 {
-printf("  ");
+printf(" ");
 }
 }
 for (i = 0; i < j; i++)
 {
 int c = *(b + o + i);
-if (c < 12 || c > 132)
+if (c < 32 || c > 132)
 {
 c = '.';
 }
