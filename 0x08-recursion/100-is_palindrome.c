@@ -35,5 +35,5 @@ if (*(s + i) != *(s + len - 1))
 	return (0);
 if (i >= len)
 	return (1);
-	return (check_pal(s, i + 1, len - 1));
+return (check_pal(s, i + 1, len - 1));
 }
