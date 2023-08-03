@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-/*
+/**
  * print_binary - a function that prints the binary representation of a number
  * @n: size of the binary
  * Return: nothing
