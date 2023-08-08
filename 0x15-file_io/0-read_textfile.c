@@ -9,7 +9,7 @@
  * @letters: number of letters to read and print
  * Return: the number of letters printed, or 0 if it failed
  */
-ssize_t read_textfile(const char *filename, size_t letters)
+size_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t  my_file;
 	ssize_t x, y;
@@ -19,8 +19,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (my_file == -1)
 		return (0);
 	character = malloc(sizeof(char) * letters);
-	x = write(STDOUT_FILENO, character, y);
-	y = read(my_file, character, letters);
+	y = write(STDOUT_FILENO, character, x);
+	x = read(my_file, character, letters);
 
 	free(character);
 	close(my_file);
