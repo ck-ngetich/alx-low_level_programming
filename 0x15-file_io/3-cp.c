@@ -36,7 +36,7 @@ void close_file(int fd)
 
 	x = close(fd);
 
-	if (x == 1)
+	if (x == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 	x = read(start, strg, 1024);
 	end = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	do {
-		if (start == 1 || x == -1)
+		if (start == -1 || x == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(strg);
