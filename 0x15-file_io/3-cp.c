@@ -7,10 +7,11 @@
 char *create_buffer(char *file);
 void close_file(int func);
 /**
- *  * create_buffer - Allocates 1024 bytes for a buffer
- *   * @file: The name of the file buffer is storing chars for
- *    * Return: A pointer to the newly-allocated buffer
- *     */
+ * create_buffer - Allocates 1024 bytes for a buffer
+ * @file: The name of the file buffer is storing chars for
+ * Return: A pointer to the newly-allocated buffer
+ */
+
 char *create_buffer(char *file)
 {
 char *buf;
@@ -27,9 +28,10 @@ exit(99);
 return (buf);
 }
 /**
- *  * close_file - Closes file descriptors
- *   * @fd: The file descriptors to be closed
- *    */
+ * close_file - Closes file descriptors
+ * @fd: The file descriptors to be closed
+ */
+
 void close_file(int fd)
 {
 int x;
@@ -43,11 +45,12 @@ exit(100);
 }
 }
 /**
- *  * main - copy the content
- *   * @argc: the number of argument supplied
- *    * @argv: array of pointer to the arguments
- *     * Return: 0 on success
- *      */
+ * main - copy the content
+ * @argc: the number of argument supplied
+ * @argv: array of pointer to the arguments
+ * Return: 0 on success
+ */
+
 int main(int argc, char *argv[])
 {
 int start, end, x, y;
