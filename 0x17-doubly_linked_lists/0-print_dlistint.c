@@ -8,6 +8,7 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	int track_node;
+
 	for (track_node = 0; h != NULL; track_node++)
 	{
 		printf("%d\n", h->n);
