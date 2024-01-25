@@ -10,12 +10,12 @@
 
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t track_nodes = 0;
+        size_t len_nodes = 0;
 
-	while (h != NULL)
-	{
-		track_nodes++;
-		h = h->next;
-	}
-	return (track_nodes);
+        while (h != NULL)
+        {
+                len_nodes++;
+                h = h->next;
+        }
+        return (len_nodes);
 }
