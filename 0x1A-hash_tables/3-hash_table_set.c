@@ -1,63 +1,54 @@
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
 #include "hash_tables.h"
 
 /**
- * add_n_hash - function that adds a node at the beginning of an hash table
- * @head: head of the  linked list
- * @key: key
- * @value: value to store
- * Return: head of the hash tables
- */
-hash_node_t *add_n_hash(hash_node_t **head, const char *key, const char *value)
-{
-	hash_node_t *tmp;
-
-	tmp = *head;
-
-	while (tmp != NULL)
-	{
-		if (strcmp(key, tmp->key) == 0)
-		{
-			free(tmp->value);
-			tmp->value = strdup(value);
-			return (*head);
-		}
-		tmp = tmp->next;
-	}
-
-	tmp = malloc(sizeof(hash_node_t));
-
-	if (tmp == NULL)
-		return (NULL);
-
-	tmp->key = strdup(key);
-	tmp->value = strdup(value);
-	tmp->next = *head;
-	*head = tmp;
-
-	return (*head);
-}
-
-/**
- * hash_table_set - adds keys or values to a given hash table
- * @ht: pointer
- * @key: key
- * @value: value of keys
- * Return: 1 if successes, else 0
+ * hash_table_set - function that add an element in a hash table.
+ * @ht:  pointer to table
+ * @key: key to add
+ * @value: values of the keys.
+ * Return: 1 on success otherwise 0
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int k_index;
+	hash_node_t *new;
+	char *value_cp;
+	unsigned long int index, x;
 
-	if (ht == NULL)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
-	if (key == NULL || *key == '\0')
+	value_cp = strdup(value);
+	if (value_cp == NULL)
 		return (0);
 
-	k_index = key_index((unsigned char *)key, ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
+	for (x = index; ht->array[x]; x++)
+	{
+		if (strcmp(ht->array[x]->key, key) == 0)
+		{
+			free(ht->array[x]->value);
+			ht->array[x]->value = value_cp;
+			return (1);
+		}
+	}
 
-	if (add_n_hash(&(ht->array[k_index]), key, value) == NULL)
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
+	{
+		free(value_cp);
 		return (0);
+	}
+	new->key = strdup(key);
+	if (new->key == NULL)
+	{
+		free(new);
+		return (0);
+	}
+	new->value = value_cp;
+	new->next = ht->array[index];
+	ht->array[index] = new;
 
 	return (1);
 }
